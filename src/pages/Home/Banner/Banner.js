@@ -8,7 +8,7 @@ import './Banner.css';
 
 const Banner = () => {
     return (
-        <div className="carousel w-full">
+        <div className="carousel w-full my-12">
             <div id="slide1" className="carousel-item relative w-full">
                 <div className='img-gradient'>
                     <img src={img5} alt="" className="w-full h-full rounded-xl" />
