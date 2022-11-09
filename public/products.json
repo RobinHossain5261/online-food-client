@@ -1,15 +1,13 @@
 [
     {
-        "_id": "01",
         "service_id": "01",
         "title": "Pizza",
         "img": "https://media.istockphoto.com/id/1279000076/photo/freshly-baked-pizza-with-arugula-tomato-red-onion-and-mozzarella.jpg?s=612x612&w=is&k=20&c=FD6jhPCgD9HR3w7_aBUeHEoMKsEb6WADJcy_0eSM-Fw=",
         "price": "30.00",
         "rating": "4.5",
-        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius veniam nostrum dolores nemo quas. Minima ullam, veniam, nesciunt quae dolore animi blanditiis deserunt, ea esse dolorum ipsum quibusdam ipsa! Corrupti at, excepturi, fugiat aut nihil neque aliquid sapiente dignissimos provident, animi molestiae ipsum. Repudiandae ipsa id nihil reiciendis soluta eos ducimus pariatur, nam architecto tenetur quo quos commodi est libero repellendus vitae. Fuga numquam nulla nam, facere neque expedita voluptatibus pariatur necessitatibus vel, dignissimos ab esse magni accusamus eveniet ad corrupti, architecto nostrum. Aspernatur ex quibusdam at cum nulla!"
+        "description": "pizza, dish of Italian origin consisting of a flattened disk of bread dough topped with some combination of olive oil, oregano, tomato, olives, mozzarella or other cheese, and many other ingredients, baked quickly—usually, in a commercial setting, using a wood-fired oven heated to a very high temperature—and served hot.One of the simplest and most traditional pizzas is the Margherita, which is topped with tomatoes or tomato sauce, mozzarella, and basil."
     },
     {
-        "_id": "02",
         "service_id": "02",
         "title": "Fried Chiken",
         "img": "https://media.istockphoto.com/id/1297771706/photo/plate-of-delectable-golden-brown-crispy-fried-chickens-on-wooden-background.jpg?s=612x612&w=is&k=20&c=uWrzgpZwabaeklcgjUVxyCzcFEpjpesIq0Xq_cufb-c=",
@@ -18,7 +16,6 @@
         "description": "Fried chicken, also known as Southern fried chicken, is a dish consisting of chicken pieces that have been coated with seasoned flour or batter and pan-fried, deep fried, pressure fried, or air fried. The breading adds a crisp coating or crust to the exterior of the chicken while retaining juices in the meat.Fried chicken, also known as Southern fried chicken, is a dish consisting of chicken pieces that have been coated with seasoned flour or batter and pan-fried, deep fried, pressure fried, or air fried. The breading adds a crisp coating or crust to the exterior of the chicken while retaining juices in the meat."
     },
     {
-        "_id": "03",
         "service_id": "03",
         "title": "Hamburger",
         "img": "https://media.istockphoto.com/id/617364554/photo/hamburger-with-fries.jpg?s=612x612&w=is&k=20&c=nV6oNsencCkRTd_QWf-TzneGtgitl22mIZQGyq5HC_0=",
@@ -27,7 +24,6 @@
         "description": "A hamburger is a sandwich consisting of a cooked meat patty on a bun or roll. You can order a hamburger, fries, and a shake at most fast food restaurants.Hamburgers are traditionally made with ground beef and served with onions, tomatoes, lettuce, ketchup, and other garnishes. You can also make a hamburger with turkey or other kinds of meat — although rarely, if ever, is ham used in a hamburger. Hamburgers were originally called hamburg steak, named for the German city of Hamburg, although no actual connection between the place and the food has ever been documented."
     },
     {
-        "_id": "04",
         "service_id": "04",
         "title": "Sandwich",
         "img": "https://media.istockphoto.com/id/1247012863/photo/ham-and-cheese-sandwich-on-whole-grain-bread.jpg?s=612x612&w=is&k=20&c=o7AGvL6K7gfLPqCz2s6Gz56CMEW1g7H3scXERrywsQU=",
@@ -36,7 +32,6 @@
         "description": "A sandwich is a meal in the form of two pieces of bread with meat, cheese, or some other filling between them. Your favorite lunch might be a peanut butter and jelly sandwich.When you put something between slices of bread, it's a sandwich. It's named for the Fourth Earl of Sandwich who's credited with inventing it. Sandwich is a verb too, that describes putting something between two other things, like sandwiching gym class between math and lunch. Sometimes sandwich involves being squeezed uncomfortably, like having to sandwich yourself between people on a crowded elevator or subway car."
     },
     {
-        "_id": "05",
         "service_id": "05",
         "title": "French Fries",
         "img": "https://media.istockphoto.com/id/1280158821/photo/diverse-keto-dishes.jpg?s=612x612&w=is&k=20&c=RXXd6ICD97otQqKEy_e42SObkGWChgkJbFFGDexBKuU=",
@@ -45,7 +40,6 @@
         "description": "french fries, also called chips, finger chips, fries, or French pommes frites, side dish or snack typically made from deep-fried potatoes that have been cut into various shapes, especially thin strips. Fries are often salted and served with other items, including ketchup, mayonnaise, or vinegar. In addition, they can be topped with more substantial fare, such as chili. Poutine is a Canadian dish of french fries covered with cheese curds and gravy.The origin of french fries is uncertain. According to one tradition, they first appeared in France, where they were likely a snack sold by street peddlers. However, in more recent years Belgium has been cited as the birthplace."
     },
     {
-        "_id": "06",
         "service_id": "06",
         "title": "Kebab",
         "img": "https://media.istockphoto.com/id/912629972/photo/chicken-kebab-with-bell-pepper.jpg?s=1024x1024&w=is&k=20&c=knCC5g2sD3dZ81P39HF0GnyD9DlZsEjPGBrhN0VUw7U=",

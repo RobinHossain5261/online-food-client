@@ -1,9 +1,20 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { GoogleAuthProvider } from "firebase/auth";
 
 const Login = () => {
-    const { login } = useContext(AuthContext);
+    const { login, providerLogin } = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
+
+    const handaleGoogleSignIn = () => {
+        providerLogin(googleProvider)
+            .then(result => {
+                const user = result.user;
+                console.log(user)
+            })
+            .catch(error => console.error(error))
+    }
 
     const handaleLogin = event => {
         event.preventDefault();
@@ -43,6 +54,7 @@ const Login = () => {
                         </div>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Login</button>
+                            <button onClick={handaleGoogleSignIn} className="btn btn-success mt-2">Login With Google</button>
                         </div>
                     </form>
                     <p className="text-center mb-5">I have no account <Link to="/signUp" className='font-bold text-red-500'>Sign Up</Link></p>

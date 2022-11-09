@@ -1,8 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import logo from '../../assets/logo.png';
 
 const Header = () => {
+    const { logOut, user } = useContext(AuthContext);
+
+    const handleLogOut = () => {
+        logOut()
+            .then(() => { })
+            .catch(error => console.log(error))
+    }
+
+
     const menuBar = <>
         <Link to="/"><li className='font-semibold mr-5 hover:text-red-600 '>Home</li></Link>
         <Link ><li className='font-semibold mr-5 hover:text-red-600'>My-review</li></Link>
@@ -32,9 +42,13 @@ const Header = () => {
                 </ul>
             </div>
             <div className="navbar-end">
-                <Link to="/login">
-                    <button className="btn btn-goast">Log In</button>
-                </Link>
+                {
+                    user?.uid ? <Link to="/login" onClick={handleLogOut} className="btn btn-goast ml-5">Log Out
+                    </Link>
+                        : <Link to="/login" className="btn btn-goast">Log In</Link>
+                }
+
+
             </div>
         </div>
     );

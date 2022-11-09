@@ -5,14 +5,14 @@ const Item = () => {
     const [products, setProducts] = useState([]);
 
     useEffect(() => {
-        fetch('products.json')
+        fetch('http://localhost:5000/items')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
     return (
         <div>
             <div className='text-center'>
-                <h1 className='text-5xl font-bold'>Our Products Menu</h1>
+                <h1 className='text-5xl font-bold'>Our Products</h1>
 
             </div>
             <div className='grid gap-10 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 my-12'>
