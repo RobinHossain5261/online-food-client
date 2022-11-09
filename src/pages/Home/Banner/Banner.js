@@ -20,7 +20,8 @@ const Banner = () => {
 
 
                 <div className="absolute  transform -translate-y-1/2 left-24  top-1/2">
-                    <h1 className='text-7xl font-bold text-white'>Enjoy <br /> <span className='text-orange-600 ml-10' >Delicious</span> <br /> Food</h1>
+                    <h1 className='text-7xl font-bold text-white'>Enjoy Our<br /> <span className='text-orange-600 ' >Delicious</span> <br /> Food</h1>
+                    <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Saepe veritatis alias in inventore facere recusandae harum doloribus delectus exercitationem itaque.</p>
                     <button className="btn btn-error mt-5">Order Now</button>
                 </div>
 
@@ -36,7 +37,8 @@ const Banner = () => {
                     <a href="#slide3" className="btn btn-circle">❯</a>
                 </div>
                 <div className="absolute  transform -translate-y-1/2 left-24  top-1/2">
-                    <h1 className='text-7xl font-bold text-white'>Enjoy <br /> <span className='text-orange-600 ml-10' >Delicious</span> <br /> Food</h1>
+                    <h1 className='text-7xl font-bold text-white'>Enjoy Our<br /> <span className='text-orange-600' >Delicious</span> <br /> Food</h1>
+                    <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Saepe veritatis alias in inventore facere recusandae harum doloribus delectus exercitationem itaque.</p>
                     <button className="btn btn-error mt-5">Order Now</button>
                 </div>
             </div>
@@ -49,7 +51,8 @@ const Banner = () => {
                     <a href="#slide4" className="btn btn-circle">❯</a>
                 </div>
                 <div className="absolute  transform -translate-y-1/2 left-24  top-1/2">
-                    <h1 className='text-7xl font-bold text-white'>Enjoy <br /> <span className='text-orange-600 ml-10' >Delicious</span> <br /> Food</h1>
+                    <h1 className='text-7xl font-bold text-white'>Enjoy Our<br /> <span className='text-orange-600 ' >Delicious</span> <br /> Food</h1>
+                    <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Saepe veritatis alias in inventore facere recusandae harum doloribus delectus exercitationem itaque.</p>
                     <button className="btn btn-error mt-5">Order Now</button>
                 </div>
             </div>
@@ -62,7 +65,8 @@ const Banner = () => {
                     <a href="#slide1" className="btn btn-circle">❯</a>
                 </div>
                 <div className="absolute  transform -translate-y-1/2 left-24  top-1/2">
-                    <h1 className='text-7xl font-bold text-white'>Enjoy <br /> <span className='text-orange-600 ml-10' >Delicious</span> <br /> Food</h1>
+                    <h1 className='text-7xl font-bold text-white'>Enjoy Our<br /> <span className='text-orange-600' >Delicious</span> <br /> Food</h1>
+                    <p className='text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Saepe veritatis alias in inventore facere recusandae harum doloribus delectus exercitationem itaque.</p>
                     <button className="btn btn-error mt-5">Order Now</button>
                 </div>
             </div>
