@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import Review from '../Review/Review';
 
 const ProductDetails = () => {
     const { _id, title, description, img, price, rating } = useLoaderData();
@@ -51,17 +52,17 @@ const ProductDetails = () => {
                 <p><span className='font-bold'>Description :</span> {description}</p>
             </div>
 
-            <div className='my-12'>
+            <div className='my-12 p-12 border-solid border-2 border-gray-200 rounded-xl'>
                 <h1 className='text-center text-4xl font-bold '>Please review this product</h1>
 
                 <form onSubmit={handaleReview}>
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label">
                             <span className="label-text text-xl font-semibold">Your name</span>
                         </label>
                         <input type="text" name="name" placeholder="Type here" defaultValue={user?.displayName} className="input input-bordered w-full" />
                     </div>
-                    <div className="form-control w-full max-w-xs">
+                    <div className="form-control w-full ">
                         <label className="label">
                             <span className="label-text text-xl font-semibold">Your email</span>
                         </label>
@@ -78,6 +79,7 @@ const ProductDetails = () => {
 
                 </form>
             </div>
+            <Review></Review>
         </div>
     );
 };
