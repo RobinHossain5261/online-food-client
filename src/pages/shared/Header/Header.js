@@ -32,8 +32,8 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className='flex items-center	'>
-                    <img className='w-20 h-20' src={logo} alt="" />
-                    <Link className="font-bold text-2xl">Online-Food</Link>
+                    <Link to="/"><img className='w-20 h-20' src={logo} alt="" /></Link>
+                    <Link to="/" className="font-bold text-2xl">Online-Food</Link>
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">

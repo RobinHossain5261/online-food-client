@@ -7,7 +7,7 @@ const Orders = () => {
     useTitle('Review');
     const { user } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
-    console.log(orders)
+
 
     useEffect(() => {
         fetch(`https://online-food-server.vercel.app/orders?email=${user?.email}`)

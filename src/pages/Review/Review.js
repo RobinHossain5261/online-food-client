@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import ReviewCard from './ReviewCard';
 
-const Review = () => {
+const Review = (id) => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('https://online-food-server.vercel.app/orders')
+        fetch(`https://online-food-server.vercel.app/orders`)
             .then(res => res.json())
             .then(data => setReviews(data))
     }, [])
