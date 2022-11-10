@@ -4,9 +4,9 @@ import ReviewCard from './ReviewCard';
 const Review = () => {
     const [reviews, setReviews] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://online-food-server.vercel.app/orders')
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setReviews(data))
     }, [])
     return (
         <div className='mb-12'>

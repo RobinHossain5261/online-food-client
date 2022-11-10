@@ -1,14 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import useTitle from '../../hook/useTitle';
 import OrderRow from './OrderRow';
 
 const Orders = () => {
+    useTitle('Review');
     const { user } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
     console.log(orders)
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user?.email}`)
+        fetch(`https://online-food-server.vercel.app/orders?email=${user?.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [user?.email])
@@ -16,7 +18,7 @@ const Orders = () => {
     const handaleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete.');
         if (proceed) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://online-food-server.vercel.app/orders/${id}`, {
                 method: 'DELETE'
             })
                 .then(res => res.json())

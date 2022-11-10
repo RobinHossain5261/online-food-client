@@ -7,6 +7,7 @@ import Orders from "../../pages/Orders/Orders";
 import ProductDetails from "../../pages/Products/ProductDetails";
 import Products from "../../pages/Products/Products";
 import SignUp from "../../pages/SignUp/SignUp";
+import PrivetRoute from "../PrivetRoute/PrivetRoute";
 
 
 const router = createBrowserRouter([
@@ -28,8 +29,8 @@ const router = createBrowserRouter([
             },
             {
                 path: '/product/:id',
-                element: <ProductDetails></ProductDetails>,
-                loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+                element: <PrivetRoute><ProductDetails></ProductDetails></PrivetRoute>,
+                loader: ({ params }) => fetch(`https://online-food-server.vercel.app/products/${params.id}`)
             },
             {
                 path: '/login',
@@ -41,7 +42,7 @@ const router = createBrowserRouter([
             },
             {
                 path: '/review',
-                element: <Orders></Orders>
+                element: <PrivetRoute><Orders></Orders></PrivetRoute>
             }
 
         ],

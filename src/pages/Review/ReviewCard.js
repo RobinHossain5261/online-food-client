@@ -8,7 +8,6 @@ const ReviewCard = ({ review }) => {
             <div className="card-body">
                 <h2 className="card-title">{customer}</h2>
                 <p>{message}</p>
-
             </div>
         </div>
     );

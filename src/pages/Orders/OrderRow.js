@@ -5,7 +5,7 @@ const OrderRow = ({ order, handaleDelete }) => {
     const [orderProduct, setOrderProduct] = useState({});
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${productId}`)
+        fetch(`https://online-food-server.vercel.app/products/${productId}`)
             .then(res => res.json())
             .then(data => setOrderProduct(data))
     }, [productId])

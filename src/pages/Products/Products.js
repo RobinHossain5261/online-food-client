@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import useTitle from '../../hook/useTitle';
 import ProductCard from './ProductCard';
 
 
 const Products = () => {
     const [products, setProducts] = useState([]);
-
+    useTitle('Products');
     useEffect(() => {
-        fetch('http://localhost:5000/products')
+        fetch('https://online-food-server.vercel.app/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
