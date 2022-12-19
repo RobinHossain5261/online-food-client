@@ -1,16 +1,30 @@
 import React, { useEffect, useState } from 'react';
+import { useContext } from 'react';
+import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hook/useTitle';
 import ProductCard from './ProductCard';
 
 
 const Products = () => {
     const [products, setProducts] = useState([]);
+    const { loading } = useContext(AuthContext);
+
     useTitle('Products');
     useEffect(() => {
         fetch('https://online-food-server.vercel.app/products')
             .then(res => res.json())
             .then(data => setProducts(data))
     }, []);
+
+    if (loading) {
+        return <div>
+            <div className="flex justify-center items-center">
+                <div className="spinner-border animate-spin inline-block w-8 h-8 border-4 rounded-full" role="status">
+                    <span className="visually-hidden">...</span>
+                </div>
+            </div>
+        </div>
+    }
 
     return (
         <div>

@@ -1,11 +1,15 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import { toast } from 'react-hot-toast';
+import { Link, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import useTitle from '../../hook/useTitle';
 
 const SignUp = () => {
+    const [errorpass, setErrorPass] = useState('');
     const { createUser } = useContext(AuthContext);
     useTitle('SignUp');
+    const navigate = useNavigate();
 
     const handaleSignUp = event => {
         event.preventDefault();
@@ -20,15 +24,21 @@ const SignUp = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
+                toast.success('User register successfull.');
+                navigate('/');
             })
-            .catch(error => console.error(error))
+            .catch(error => {
+                console.error(error);
+                setErrorPass(error.message)
+
+            })
     }
 
     return (
         <div className="hero min-h-screen bg-base-200">
             <div className="hero-content">
 
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-96 shadow-2xl bg-base-100">
                     <form onSubmit={handaleSignUp} className="card-body">
                         <h1 className="text-5xl text-center font-bold">Sign Up</h1>
                         <div className="form-control">
@@ -50,6 +60,7 @@ const SignUp = () => {
                             <input type="password" name="password" placeholder="password" className="input input-bordered" required />
 
                         </div>
+                        <p className='text-red-500'>{errorpass}</p>
                         <div className="form-control mt-6">
                             <button className="btn btn-primary">Sign Up</button>
                         </div>

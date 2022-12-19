@@ -5,15 +5,24 @@ import OrderRow from './OrderRow';
 
 const Orders = () => {
     useTitle('Review');
-    const { user } = useContext(AuthContext);
+    const { user, logOut } = useContext(AuthContext);
     const [orders, setOrders] = useState([]);
 
 
     useEffect(() => {
-        fetch(`https://online-food-server.vercel.app/orders?email=${user?.email}`)
-            .then(res => res.json())
+        fetch(`https://online-food-server.vercel.app/orders?email=${user?.email}`, {
+            headers: {
+                authorization: `Bearer ${localStorage.getItem('genious-token')}`
+            },
+        })
+            .then(res => {
+                if (res.status === 401 || res.status === 403) {
+                    return logOut()
+                }
+                return res.json()
+            })
             .then(data => setOrders(data))
-    }, [user?.email])
+    }, [user?.email, logOut])
 
     const handaleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete.');
